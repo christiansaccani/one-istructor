@@ -53,6 +53,17 @@ section {
         margin: 0 auto;
         font-weight: bold;
     }
+
+    ul {
+        margin-top: 55px;
+        
+        @include ulDefault;
+        max-width: $maxWidth;
+        row-gap: 1.5em;
+
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 </style>
