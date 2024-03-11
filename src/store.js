@@ -1,5 +1,19 @@
-import { reactive } from 'vue'
+// store.js
+import { createStore } from 'vuex';
 
-export const store = reactive({
+const store = createStore({
+    state: {
+        arrayNav: ['Courses', 'Course Formats', 'Add Course', 'Pages', 'Demos']
+    },
+    mutations: {
 
+    },
+    actions: {
+
+    },
+    getters: {
+
+    }
 });
+
+export default store;

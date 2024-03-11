@@ -6,7 +6,7 @@ name: 'AppNav',
 
 data() {
     return {
-        store,
+        arrayNav: this.$store.state.arrayNav,
     };
 },
 
@@ -15,6 +15,18 @@ data() {
 </script>
 
 <template>
+
+<nav>
+    <div id="logo">
+
+    </div>
+    <div id="link">
+
+    </div>
+    <div id="socials">
+
+    </div>
+</nav>
 
 </template>
 
