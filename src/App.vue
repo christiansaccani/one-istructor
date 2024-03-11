@@ -1,11 +1,13 @@
 <script>
 
 import AppNav from './components/AppNav.vue';
+import AppJumbo from './components/AppJumbo.vue';
 
 export default {
 
   components: {
     AppNav,
+    AppJumbo,
   },
 }
 
@@ -13,6 +15,7 @@ export default {
 
 <template>
   <AppNav></AppNav>
+  <AppJumbo></AppJumbo>
 </template>
 
 <style>

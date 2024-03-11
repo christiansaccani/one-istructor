@@ -16,25 +16,25 @@ export default {
 
 <template>
     <nav>
-      <div id="nav_container">
+        <div id="nav_container">
         <div id="logo">
-          <img src="/images/MasterStudy-1.svg" alt="">
+            <img src="/images/MasterStudy-1.svg" alt="">
         </div>
         <section>
-          <div id="link">
+            <div id="link">
             <ul>
-              <li v-for="(item, index) in store.state.arrayNav" :key="index">{{ item }}</li>
+                <li v-for="(item, index) in store.state.arrayNav" :key="index">{{ item }}</li>
             </ul>
-          </div>
-          <div id="socials">
+            </div>
+            <div id="socials">
             <ul>
-              <li v-for="(item, index) in store.state.arraySocials" :key="index" v-html="item"></li>
+                <li v-for="(item, index) in store.state.arraySocials" :key="index" v-html="item"></li>
             </ul>
-          </div>
+            </div>
         </section>
-      </div>
+        </div>
     </nav>
-  </template>
+</template>
 
 
 <style lang="scss" scoped>
@@ -55,10 +55,12 @@ nav {
         justify-content: space-between;
         align-items: baseline;
 
-        width: 1310px;
+        max-width: $maxWidth;
+        width: 100%;
 
         img {
             height: 50px;
+            cursor: pointer;
         }
 
         section {
@@ -71,16 +73,22 @@ nav {
             #link {
 
                 ul {
-                @include ulDefault;
-                gap: 30px;
+                    @include ulDefault;
+                    gap: 30px;
+                    li{
+                        cursor: pointer;
+                    }
                 }
             }
 
             #socials {
                 
                 ul {
-                @include ulDefault;
-                gap: 15px;
+                    @include ulDefault;
+                    gap: 15px;
+                    li{
+                        cursor: pointer;
+                    }
                 }
             }
         }
