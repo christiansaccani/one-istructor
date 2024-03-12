@@ -53,8 +53,6 @@ section {
     background-image: url(./images/slider_1-1917x607-1914x606.jpg);
     background-size: cover;
 
-    margin-bottom: 20px;
-
     #left_section {
         display: flex;
         flex-direction: column;

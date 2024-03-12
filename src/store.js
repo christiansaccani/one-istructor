@@ -62,6 +62,29 @@ const store = createStore({
                 hours: 6,
             },
         ],
+
+        whyUs: [
+            {
+                title: "Entrepreneurship",
+                logo: '<i class="fa-solid fa-briefcase"></i>',
+                description: "Unlock your potential for business success. Learn to innovate, lead, and navigate the complexities of entrepreneurship for sustainable growth and impact."
+            },
+            {
+                title: "Accelerated learning",
+                logo: '<i class="fa-solid fa-rocket"></i>',
+                description: "Master efficient learning techniques. Accelerate your understanding and retention of information for rapid skill acquisition, academic excellence, and professional advancement."
+            },
+            {
+                title: "Productivity",
+                logo: '<i class="fa-solid fa-thumbs-up"></i>',
+                description: "Maximize your efficiency and output. Develop strategies to manage time, prioritize tasks, and optimize workflows for peak productivity and personal satisfaction."
+            },
+            {
+                title: "Life Coaching",
+                logo: '<i class="fa-solid fa-gear"></i>',
+                description: "Empower personal growth and fulfillment. Gain insights, clarity, and support to overcome obstacles, embrace change, and thrive in all aspects of life."
+            },
+        ]
     },
     mutations: {
 

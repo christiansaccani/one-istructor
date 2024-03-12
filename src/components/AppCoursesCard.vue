@@ -70,7 +70,7 @@ li {
     }
 
     h3 {
-        max-width: $cardMaxWidth;
+        max-width: $cardCoursesMaxWidth;
         font-size: 20px;
         font-weight: 600;
 
@@ -80,7 +80,7 @@ li {
 
     h4 {
         width: 100%;
-        max-width: $cardMaxWidth;
+        max-width: $cardCoursesMaxWidth;
         font-size: 15px;
 
         color: #aaaaaa;
@@ -95,7 +95,7 @@ li {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: $cardMaxWidth;
+        max-width: $cardCoursesMaxWidth;
 
         font-size: 15px;
         padding: .25em 0;
