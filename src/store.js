@@ -84,6 +84,29 @@ const store = createStore({
                 logo: '<i class="fa-solid fa-gear"></i>',
                 description: "Empower personal growth and fulfillment. Gain insights, clarity, and support to overcome obstacles, embrace change, and thrive in all aspects of life."
             },
+        ],
+
+        counters: [
+            {
+                count: 3195,
+                title: "Online Learner",
+                logo: '<i class="fa-regular fa-user"></i>'
+            },
+            {
+                count: 23,
+                title: "Video Courses",
+                logo: '<i class="fa-solid fa-film"></i>'
+            },
+            {
+                count: 437,
+                title: "Sliders & Images",
+                logo: '<i class="fa-regular fa-image"></i>'
+            },
+            {
+                count: 1440,
+                title: "Excellent Reviews",
+                logo: '<i class="fa-regular fa-thumbs-up"></i>'
+            },
         ]
     },
     mutations: {

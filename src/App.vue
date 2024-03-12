@@ -5,6 +5,7 @@ import AppJumbo from './components/AppJumbo.vue';
 import AppCourses from './components/AppCourses.vue';
 import AppJumboBook from './components/AppJumboBook.vue';
 import AppWhyUs from './components/AppWhyUs.vue';
+import AppCounter from './components/AppCounter.vue';
 
 export default {
 
@@ -14,6 +15,7 @@ export default {
     AppCourses,
     AppJumboBook,
     AppWhyUs,
+    AppCounter,
   },
 }
 
@@ -25,6 +27,7 @@ export default {
   <AppCourses></AppCourses>
   <AppJumboBook></AppJumboBook>
   <AppWhyUs></AppWhyUs>
+  <AppCounter></AppCounter>
 </template>
 
 <style>
