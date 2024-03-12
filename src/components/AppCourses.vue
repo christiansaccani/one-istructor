@@ -31,6 +31,7 @@ export default {
       v-for="currentCourse in store.state.courses"
       :course="currentCourse"></AppCoursesCard>
     </ul>
+    <button>Load More</button>
 </section>
 
 </template>
@@ -56,13 +57,26 @@ section {
 
     ul {
         margin-top: 55px;
-        
+        margin-bottom: 55px;
+
         @include ulDefault;
         max-width: $maxWidth;
         row-gap: 1.5em;
 
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    button {
+        border: none;
+        background-color: $primaryColor;
+        color: #ffffff;
+
+        font-weight: bold;
+        text-transform: uppercase;
+
+        padding: .75em 1.5em;
+        border-radius: 34px;
     }
 }
 

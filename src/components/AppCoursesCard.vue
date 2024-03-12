@@ -66,6 +66,7 @@ li {
 
     img {
         width: 100%;
+        cursor: pointer;
     }
 
     h3 {
