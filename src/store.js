@@ -107,6 +107,24 @@ const store = createStore({
                 title: "Excellent Reviews",
                 logo: '<i class="fa-regular fa-thumbs-up"></i>'
             },
+        ],
+
+        pages: [
+            {
+              title: 'Excellent Course!',
+              vote: 5,
+              content: 'I enrolled in the Web Development course, and it exceeded all my expectations. The instructors are knowledgeable and engaging, and the content is well-structured. I learned a lot and highly recommend it to anyone interested in learning web development.'
+            },
+            {
+              title: 'Highly Informative!',
+              vote: 5,
+              content: 'I took the Data Science course, and it was incredibly informative. The lessons were well-paced and covered a wide range of topics. The hands-on projects were particularly helpful in reinforcing concepts. I feel much more confident in my data analysis skills now. Thanks!'
+            },
+            {
+              title: 'Fantastic Learning Experience!',
+              vote: 4,
+              content: 'I recently completed the Graphic Design course, and it was a fantastic learning experience. The course material was comprehensive, and the practical assignments helped me improve my design skills significantly. I\'m grateful for the opportunity to learn from such talented instructors.'
+            }
         ]
     },
     mutations: {

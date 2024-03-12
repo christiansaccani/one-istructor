@@ -6,6 +6,7 @@ import AppCourses from './components/AppCourses.vue';
 import AppJumboBook from './components/AppJumboBook.vue';
 import AppWhyUs from './components/AppWhyUs.vue';
 import AppCounter from './components/AppCounter.vue';
+import AppCarousel from './components/AppCarousel.vue';
 
 export default {
 
@@ -16,6 +17,7 @@ export default {
     AppJumboBook,
     AppWhyUs,
     AppCounter,
+    AppCarousel,
   },
 }
 
@@ -28,6 +30,7 @@ export default {
   <AppJumboBook></AppJumboBook>
   <AppWhyUs></AppWhyUs>
   <AppCounter></AppCounter>
+  <AppCarousel></AppCarousel>
 </template>
 
 <style>
