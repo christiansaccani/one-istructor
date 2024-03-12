@@ -8,13 +8,29 @@ export default {
   data() {
     return {
       pages: store.state.pages,
-      currentPageIndex: 0
+      currentPageIndex: 1
     };
   },
 
   methods: {
     showPage(index) {
       this.currentPageIndex = index;
+    },
+
+    prevPage() {
+      if (this.currentPageIndex > 0) {
+        this.currentPageIndex--;
+      } else if (this.currentPageIndex == 0) {
+        this.currentPageIndex = this.pages.length - 1;
+      }
+    },
+
+    nextPage() {
+      if (this.currentPageIndex < this.pages.length - 1) {
+        this.currentPageIndex++;
+      } else if (this.currentPageIndex == this.pages.length - 1) {
+        this.currentPageIndex = 0;
+      }
     }
   },
 
@@ -31,20 +47,18 @@ export default {
 
 <section>
   <h2>What Students Say</h2>
-  <div id="carousel-container">
-    <div class="carousel-page" @click="showPage(0)" :class="{ 'active': currentPageIndex === 0 }">
-      <img src="/images/1-100x100.jpg" alt="">
+
+  <div id="thumb-container">
+    <i id="prev-arrow" @click="prevPage" class="fa-solid fa-chevron-left"></i>
+    <div v-for="(page, index) in pages" :key="index" class="carousel-page" @click="showPage(index)" :class="{ 'active': currentPageIndex === index }">
+      <img :src="page.avatar" alt="">
     </div>
-    <div class="carousel-page" @click="showPage(1)" :class="{ 'active': currentPageIndex === 1 }">
-      <img src="/images/2-100x100.jpg" alt="">
-    </div>
-    <div class="carousel-page" @click="showPage(2)" :class="{ 'active': currentPageIndex === 2 }">
-      <img src="/images/4-100x100.jpg" alt="">
-    </div>
+    <i id="next-arrow" @click="nextPage" class="fa-solid fa-chevron-right"></i>
   </div>
+  
   <div id="content-container">
     <div id="content">
-      <h2>{{ currentPage.title }}</h2>
+      <h4>{{ currentPage.title }}</h4>
       <i v-for="index in 5" :class="['fas', 'fa-star', {'filled': index <= currentPage.vote}, {'empty': index > currentPage.vote}]" :key="index"></i>
       <p>{{ currentPage.content }}</p>
     </div>
@@ -64,50 +78,74 @@ section {
   flex-direction: column;
   align-items: center;
 
-    #carousel-container {
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      max-width: $maxWidth;
-      width: 100%;
+  margin: 80px 0;
+
+  h2 {
+    font-size: 45px;
+    font-weight: bolder;
+  }
+
+  #thumb-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: $maxWidth;
+    width: 100%;
+  }
+
+  .carousel-page {
+    display: flex;
+    justify-content: space-around;
+
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    img {
+      width: 65px;
+      border-radius: 50%;
     }
+  }
 
-    .carousel-page {
-      display: flex;
-      justify-content: space-around;
+  #content-container {
+    padding: 10px;
+    max-width: 760px;
 
+    #content {
       text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
 
-      img {
-        border-radius: 50%;
+      h4 {
+        font-weight: bold;
+      }
+
+      .fa-star.filled {
+        color: $primaryColor;
+      }
+
+      .fa-star.empty {
+        color: rgb(0, 0, 0);
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 18px;
       }
     }
-
-    #content-container {
-      padding: 20px;
-      max-width: 760px;
-
-      #content {
-        text-align: center;
-
-        .fa-star.filled {
-          color: $primaryColor;
-        }
-
-        .fa-star.empty {
-          color: rgb(0, 0, 0);
-        }
-      }
-      
-    }
+    
+  }
 }
 
-.carousel-page.active img{
-  transform: scale(1.2);}
+.carousel-page.active img {
+  transform: scale(1.2);
+}
+
+#prev-arrow,
+#next-arrow {
+  cursor: pointer;
+  padding: 0 25px;
+}
 
 
 </style>
