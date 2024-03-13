@@ -7,6 +7,7 @@ import AppJumboBook from './components/AppJumboBook.vue';
 import AppWhyUs from './components/AppWhyUs.vue';
 import AppCounter from './components/AppCounter.vue';
 import AppCarousel from './components/AppCarousel.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
 
@@ -18,6 +19,7 @@ export default {
     AppWhyUs,
     AppCounter,
     AppCarousel,
+    AppFooter,
   },
 }
 
@@ -31,6 +33,7 @@ export default {
   <AppWhyUs></AppWhyUs>
   <AppCounter></AppCounter>
   <AppCarousel></AppCarousel>
+  <AppFooter></AppFooter>
 </template>
 
 <style>

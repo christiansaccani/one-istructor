@@ -89,7 +89,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    
     max-width: $maxWidth;
     width: 100%;
   }

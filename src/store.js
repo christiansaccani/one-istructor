@@ -128,6 +128,39 @@ const store = createStore({
                 vote: 4,
                 content: 'I recently completed the Graphic Design course, and it was a fantastic learning experience. The course material was comprehensive, and the practical assignments helped me improve my design skills significantly. I\'m grateful for the opportunity to learn from such talented instructors.'
             }
+        ],
+
+        // footer //
+
+        footer: [
+            {
+                title: "about",
+                item: "Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education.\nDeveloped by StylemixThemes.",
+                socials: ['<i class="fa-brands fa-facebook"></i>', '<i class="fa-brands fa-x-twitter"></i>', '<i class="fa-brands fa-instagram"></i>'],
+            },
+            {
+                title: "contacts",
+                items: ["USA, California 20, First Avenue, California", "Tel.: +1 212 458 300 32", "Fax: +1 212 375 24 14", "info@masterstudy.com"],
+            },
+            {
+                title: "pages",
+                items: ["Blog", "Home", "Shortcodes", "Courses", "Membership", "Typography"],
+            },
+            {
+                title: "blog",
+                items: [
+                    {
+                        title: 'Our main target is to "Developing Yourself as a Leader"',
+                        pic: '/images/photo-1517520287167-4bbf64a00d66-75x75.jpeg',
+                        date: 'August 9, 2018'
+                    },
+                    {
+                        title: 'Those Other College Expenses You Aren\'t Thinking About',
+                        pic: '/images/photo-1490376840453-5f616fbebe5b-75x75.jpeg',
+                        date: 'June 3, 2015'
+                    },
+                ],
+            },
         ]
     },
     mutations: {
