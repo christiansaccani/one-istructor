@@ -3,7 +3,14 @@ import { createStore } from 'vuex';
 
 const store = createStore({
     state: {
-        arrayNav: ['Courses', 'Course Formats', 'Add Course', 'Pages', 'Demos'],
+        arrayNav: [
+            { label: 'Courses', new: false },
+            { label: 'Course Formats', new: false },
+            { label: 'Add Course', new: true },
+            { label: 'Pages', new: false },
+            { label: 'Demos', new: false }
+        ],
+
         arraySocials: ['<i class="fa-brands fa-linkedin"></i>', '<i class="fa-brands fa-instagram"></i>', '<i class="fa-brands fa-facebook"></i>', '<i class="fa-brands fa-x-twitter"></i>'],
 
         courses: [

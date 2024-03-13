@@ -23,7 +23,9 @@ export default {
         <section>
             <div id="link">
             <ul>
-                <li v-for="(item, index) in store.state.arrayNav" :key="index">{{ item }}</li>
+                <li v-for="(item, index) in store.state.arrayNav" :key="index">{{ item.label }}
+                    <p id="new" v-if="item.new === true">NEW</p>
+                </li>
             </ul>
             </div>
             <div id="socials">
@@ -77,11 +79,26 @@ nav {
                     @include ulDefault;
                     gap: 30px;
                     li{
+                        position: relative;
+
                         cursor: pointer;
                         border-bottom: 5px solid #ffffff;  
 
                         &:hover {
                             border-bottom-color: $primaryColor;                        
+                        }
+
+                        #new {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            transform: translateY(-50%) translateX(50%);
+
+                            font-size: 10px;
+                            background-color: #dc1245;
+                            color: #ffffff;
+                            padding: 0 5px;
+                            border-radius: 4px
                         }
                     }
                 }
