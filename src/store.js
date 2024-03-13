@@ -15,6 +15,7 @@ const store = createStore({
                 difficulty: "Advanced",
                 lectures: 8,
                 hours: 6,
+                price: "$59",
             },
             {
                 special: true,
@@ -24,6 +25,7 @@ const store = createStore({
                 difficulty: "Advanced",
                 lectures: 8,
                 hours: 6,
+                price: "$59",
             },
             {
                 special: true,
@@ -33,6 +35,7 @@ const store = createStore({
                 difficulty: "Advanced",
                 lectures: 6,
                 hours: 6,
+                price: "$54",
             },
             {
                 special: false,
@@ -42,6 +45,7 @@ const store = createStore({
                 difficulty: "Intermediate",
                 lectures: 6,
                 hours: 6,
+                price: "$54",
             },
             {
                 special: false,
@@ -51,6 +55,7 @@ const store = createStore({
                 difficulty: "Intermediate",
                 lectures: 6,
                 hours: 6,
+                price: "$54",
             },
             {
                 special: false,
@@ -60,6 +65,7 @@ const store = createStore({
                 difficulty: "Beginner",
                 lectures: 6,
                 hours: 6,
+                price: "$35",
             },
         ],
 
@@ -163,15 +169,6 @@ const store = createStore({
             },
         ]
     },
-    mutations: {
-
-    },
-    actions: {
-
-    },
-    getters: {
-
-    }
 });
 
 export default store;

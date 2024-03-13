@@ -39,6 +39,14 @@ li {
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
+    &:hover {
+        background-color: $primaryColor;
+        span {
+            color: #ffffff;
+        }
+        
+    }
+
     span {
         font-size: 50px;
         color: $primaryColor;
@@ -50,7 +58,7 @@ li {
         gap: 1em;
 
         max-width: 395px;
-        color: #AAAAAA;
+        color: #5c5c5c;
 
         h4 {
             font-size: 22px;

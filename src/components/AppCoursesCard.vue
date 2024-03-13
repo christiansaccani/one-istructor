@@ -13,7 +13,10 @@ export default {
 <template>
 
 <li>
-    <img :src="course.cover" alt="">
+    <section class="upper">
+        <img :src="course.cover" alt="">
+        <div class="price">{{ course.price }}</div>
+    </section>
     <p id="offer" v-if="course.special === true">SPECIAL</p>
     <h3>{{ course.title }}</h3>
     <h4>{{ course.type }}</h4>
@@ -63,11 +66,44 @@ li {
         padding: .3em .3em .2em;
         border-radius: 3px;
     }
-
-    img {
+    
+    .upper {
         width: 100%;
-        cursor: pointer;
+        
+        position: relative;
+        background-color: #383838;
+
+        &:hover {
+        img {
+            opacity: 0.5;
+        }
+        .price {
+            opacity: 1;
+        }
     }
+
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .price {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+
+            font-size: 25px;
+            font-weight: bolder;
+            width: auto;
+            color: #ffffff;
+            cursor: pointer;
+
+            opacity: 0;
+        }
+    }
+
+    
 
     h3 {
         max-width: $cardCoursesMaxWidth;
@@ -75,7 +111,7 @@ li {
         font-weight: 600;
 
         text-align: center;
-        margin-top: 1.2em;
+        margin-top: .5em;
     }
 
     h4 {
@@ -104,6 +140,7 @@ li {
             color: $primaryColor;
         }
     }
+
 }
 
 </style>

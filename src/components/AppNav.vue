@@ -57,6 +57,7 @@ nav {
 
         max-width: $maxWidth;
         width: 100%;
+        margin-top: 5px; 
 
         img {
             height: 50px;
@@ -77,6 +78,11 @@ nav {
                     gap: 30px;
                     li{
                         cursor: pointer;
+                        border-bottom: 5px solid #ffffff;  
+
+                        &:hover {
+                            border-bottom-color: $primaryColor;                        
+                        }
                     }
                 }
             }
