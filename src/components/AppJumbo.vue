@@ -1,9 +1,14 @@
 <script>
 
 import store from '../store.js';
+import AppCountdown from './/AppCountdown.vue';
 
 export default {
   name: 'AppJumbo',
+
+  components: {
+    AppCountdown,
+  },
 
   data() {
     return {
@@ -29,6 +34,7 @@ export default {
                 these sweet mornings of spring which I enjoy with my whole heart.
             </p>
         </div>
+        <AppCountdown></AppCountdown>
     </div>
 
     <div id="bottom_container">
